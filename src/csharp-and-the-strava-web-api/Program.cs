@@ -10,7 +10,7 @@ namespace csharp_and_the_strava_web_api
         {
             Console.WriteLine("Hello World!");
 
-            Strava strava = new Strava("youraccesstoken");
+            Strava strava = new Strava("8202cc10d26b0609f892ca63291aeb36a0223a9d");
             IEnumerable<Activity> rides = await strava.GetStravaRides();
 
             foreach (Activity ride in rides)

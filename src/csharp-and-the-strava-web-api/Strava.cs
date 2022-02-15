@@ -72,5 +72,11 @@ namespace csharp_and_the_strava_web_api
             string url = string.Format("https://www.strava.com/api/v3/athlete?access_token={0}&per_page=200", _accessToken);
             return await this.GetStravaData<Athlete>(url);
         }
+
+        public async Task<IEnumerable<Club>> GetClubs()
+        {
+            string url = string.Format("https://www.strava.com/api/v3/athlete/clubs?access_token={0}&per_page=200", _accessToken);
+            return await this.GetStravaData<IEnumerable<Club>>(url);
+        }
     }
 }
